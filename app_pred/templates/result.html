@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            App Success
+        </title>
+        <link href="{% static 'style/style.css' %}" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    <h1 style="text-align:center">Welcome to the Result page!!</h1>
+    {% if predicted %}
+    <h1 style="text-align:center">The probability of your app success is {{probability}}%</h1>
+    {% else %}
+    <h1 style="text-align:center">The probability of your app failure is {{probability}}%</h1>
+    {% endif %}
+
+</body>
+</html>

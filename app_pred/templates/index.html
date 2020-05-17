@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+<head>
+<title>APP SUCCESS PREDICTION</title>
+<link href="{% static 'style/base.css' %}" rel="stylesheet" type="text/css">
+
+
+
+</head>
+
+<body>
+<header>
+	<div class="row">
+	<ul class="main-nav">
+		<li class="active"><a href="">Home</a></li>
+		<li><a href="{% url 'app_pred:check' %}">Feature Selection</a></li>
+		<li><a href="{% url 'app_pred:about' %}">About</a></li>
+		
+	</ul>
+	</div>
+	
+	<div class="hero">
+	<h1>Are You Ready?</h1>
+	
+		<div class="button">
+			<a href="{% url 'app_pred:form' %}" class="btn btn-one">Watch</a>
+		</div>
+	
+	</div>
+		
+</header>
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

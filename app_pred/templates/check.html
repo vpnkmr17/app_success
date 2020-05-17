@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="{% static 'style/style.css' %}" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Category Selection!!</h1>
+        <p>
+            There are many categories of apps that are equal in terms of being the highest rated. This is great, however, the 
+            interest should lie within the app categories which have the lowest number of high ratings. These poorly rated apps
+            deserve more attention because if a new sleek new app in that category were to be put on the app store, then the
+            developers could satisfy the demand for innovation in this area. In this case, The Categories of Importance are 
+            <i>"AUTO_AND_VEHICLES"and "ENTERTAINMENT."</i>
+        </p>
+        <h1>Features that affect most!</h1>
+        <p>
+            Above, we can see that Installs and Reviews has the strongest inverse correlation. This is reasonable because more 
+            reviews are conducted on apps that are the most popular. Since Installs was not correlated to Type, this disproves 
+            our intuition that free apps lead to more installs. Since the Installs parameter is independent and not correlated to
+            any other parameters, we must only use Installs to show the popularity of an app. Apps with larger amounts of
+            installs would generate the most revenue. Let's take a look at the Top 40 Apps that businesses should consider
+            signing advertising deals with!
+        </p>
+        <h1>The Model - (Decision Tree Classifier)</h1>
+        <p>
+            In order to predict if an app will be successful, we must first determine what shows success. In this case a popular
+            app has a high install value. The way in which we will go about preprocessing the data is by binarizing the Installs
+            column. Anything above 100,000 will be considered equal to 1, and everything below that threshold will be equal to 0. 
+            This data split is not symmetric and will cause the model to be biased when predicting popularity of an app. We will 
+            pop off the enough values of each group to make a 50-50 training set, and the rest will be used for our test set. Also, 
+            we will encode the object labels of desired features.
+        </p>
+    <h1>Conclusion</h1>
+    <p>
+        <ul>
+            <li>
+                <h3>For Innovation</h3> -<b>Developers</b> should focus in on apps with a category of Auto and Vehicles 
+                and Entertainment, as there are not many highly rated apps in these categories.
+            </li>
+            <li>
+                <h3>For Revenue</h3> -<b>Marketers</b> should advertise on the top 40 most installed apps list above, in order to reach the 
+                maximum viewing of their advertisements.
+            </li>
+            <li>
+                <h3>For Popularity</h3> -<b>Everyone</b> building apps should consider that the Category and Genre of an app may 
+                strongly dictate if an app will be popular or not. However, the Size, Type, Price, Content Rating, and Genre
+                features should all be used to most accurately determine if an app will gain maximum installs. 
+            </li>
+        </ul>
+    </p>
+    </body>
+</html>
